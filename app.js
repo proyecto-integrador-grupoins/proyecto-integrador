@@ -10,5 +10,9 @@ function renderizarTareas(tareas) {
     listaTareas.appendChild(li);
   });
 }
-
+document.getElementById("input-tarea").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    document.getElementById("btn-agregar").click();
+  }
+});
 renderizarTareas(["Ejemplo de tarea inicial"]);
